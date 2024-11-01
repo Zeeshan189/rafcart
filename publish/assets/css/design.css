@@ -1,0 +1,216 @@
+.heading-xs {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+}
+
+.Paragraph-xs {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.label-all {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: left;
+    color: black;
+}
+
+.btn-yellow {
+    height: 40px !important;
+    color: #fff;
+    width: fit-content;
+    padding: 8px 16px 8px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+/*=============== Overlay ===============*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 9;
+    transition: opacity 0.3s ease;
+}
+
+#overlay.hidden {
+    display: none;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #ffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(251, 3, 36);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(207, 33, 57);
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    border-radius: 50%;
+    background-color: rgb(253, 61, 87);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: bottom 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.scrollup:hover {
+    transform: translateY(-0.5rem);
+    background-color: rgb(220, 53, 69);
+}
+
+/* Show Scroll Up */
+.show-scroll {
+    bottom: 3rem;
+}
+
+/* Add animation for scrolling visibility */
+.scrollup.show-scroll {
+    animation: fadeInUp 0.4s ease-in-out;
+}
+
+/*=============== About us ===============*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/*=============== Swiper ===============*/
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pagination container */
+.swiper-pagination {
+    position: static !important;
+    margin-top: 20px;
+}
+
+/* Default bullet style */
+.swiper-pagination-bullet {
+    display: none !important;
+}
+
+/*=============== Pagination ===============*/
+.disabled-btn {
+    background-color: rgb(253, 61, 87);
+    border-color: #e0e0e0;
+    color: #ffff;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/*=============== Loader ===============*/
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+.loader {
+    width: 40px;
+    aspect-ratio: 1;
+    color: rgb(253, 61, 87);
+    position: relative;
+    background:
+        conic-gradient(from 134deg at top, currentColor 92deg, #0000 0) top,
+        conic-gradient(from -46deg at bottom, currentColor 92deg, #0000 0) bottom;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+/*=============== Loader Animation ===============*/
+.loader:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    --g: currentColor 14.5px, #0000 0 calc(100% - 14.5px), currentColor 0;
+    background:
+        linear-gradient(45deg, var(--g)),
+        linear-gradient(-45deg, var(--g));
+    animation: l7 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes l7 {
+    33% {
+        inset: -10px;
+        transform: rotate(0deg)
+    }
+
+    66% {
+        inset: -10px;
+        transform: rotate(90deg)
+    }
+
+    100% {
+        inset: 0;
+        transform: rotate(90deg)
+    }
+}
+
+/*=============== Mobile Screen ===============*/
+@media (min-width: 375px) {
+    .cards {
+        width: 286px;
+    }
+}
+
+/*=============== Medium Screen ===============*/
+@media (min-width: 768px) {
+    .cards {
+        width: 294px;
+    }
+}
+
+/*=============== Large Screen ===============*/
+@media (min-width: 992px) {
+    .cards {
+        width: 259px;
+    }
+}

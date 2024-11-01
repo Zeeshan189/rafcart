@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/design.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Ecommerce - My Profile</title>
+  </head>
+
+  <body class="relative">
+    <!-- Loader -->
+    <div class="loader-container hidden">
+      <div class="loader"></div>
+    </div>
+
+    <!--Header-->
+    <header class="py-4 shadow-sm bg-white text-5xl">
+      <div
+        class="container !flex flex-col md:!flex-row items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="index.html">
+          <img src="./assets/images/logo.svg" class="w-32" alt="Logo" />
+        </a>
+
+        <!-- Search -->
+        <div
+          class="w-full max-w-xl md:!max-w-sm lg:!max-w-xl relative flex my-4 md:mb-0"
+        >
+          <span class="absolute left-4 top-3 text-lg text-gray-400">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input
+            type="text"
+            class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
+            placeholder="search"
+          />
+          <button
+            class="bg-primary border border-primary text-white text-sm font-medium px-8 rounded-r-md hover:bg-transparent hover:text-primary transition"
+          >
+            Search
+          </button>
+        </div>
+
+        <!-- Wish list, Cart and My Account -->
+        <div class="flex items-center space-x-4">
+          <!-- Wish list -->
+          <a
+            href="wishlist.html"
+            class="text-center text-gray-700 hover:text-primary transition relative"
+          >
+            <div class="text-2xl">
+              <i class="far fa-heart"></i>
+            </div>
+            <div class="Paragraph-xs leading-3">Wish List</div>
+            <span
+              class="absolute right-0 -top-1 h-5 w-5 rounded-full flex items-center justify-center bg-primary text-white Paragraph-xs md:!Paragraph-md"
+              >8</span
+            >
+          </a>
+
+          <!-- Cart -->
+          <a
+            href="#"
+            class="text-center text-gray-700 hover:text-primary transition relative"
+          >
+            <div class="text-2xl">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="Paragraph-xs leading-3">Cart</div>
+            <span
+              class="absolute -right-3 -top-1 h-5 w-5 rounded-full flex items-center justify-center bg-primary text-white Paragraph-xs md:!Paragraph-md"
+              >8</span
+            >
+          </a>
+
+          <!-- My Account -->
+          <a
+            href="account.html"
+            class="text-center text-gray-700 hover:text-primary transition relative"
+          >
+            <div class="text-2xl">
+              <i class="far fa-user"></i>
+            </div>
+            <div class="Paragraph-xs leading-3">Account</div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800">
+      <div class="container flex items-center justify-between">
+        <!-- Category Dropdown -->
+        <div
+          id="top-content"
+          class="px-8 py-4 bg-primary flex items-center cursor-pointer relative group z-40"
+        >
+          <span class="text-white">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="ml-4 text-white">All Categories</span>
+
+          <div
+            class="absolute w-full left-0 top-full shadow-md bg-white py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible"
+          >
+            <!-- Category Links -->
+            <a
+              href="#"
+              class="flex items-center px-6 py-3 hover:bg-gray-100 transition"
+            >
+              <img
+                src="./assets/images/icons/icons/bed.svg"
+                class="h-5 w-5 object-contain"
+                alt="Bedroom"
+              />
+              <span class="ml-6 text-gray-600 text-sm">Bedroom</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center px-6 py-3 hover:bg-gray-100 transition"
+            >
+              <img
+                src="./assets/images/icons/icons/sofa.svg"
+                class="h-5 w-5 object-contain"
+                alt="Sofa"
+              />
+              <span class="ml-6 text-gray-600 text-sm">Sofa</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center px-6 py-3 hover:bg-gray-100 transition"
+            >
+              <img
+                src="./assets/images/icons/icons/office.svg"
+                class="h-5 w-5 object-contain"
+                alt="Office"
+              />
+              <span class="ml-6 text-gray-600 text-sm">Office</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center px-6 py-3 hover:bg-gray-100 transition"
+            >
+              <img
+                src="./assets/images/icons/icons/outdoor-cafe.svg"
+                class="h-5 w-5 object-contain"
+                alt="Outdoor"
+              />
+              <span class="ml-6 text-gray-600 text-sm">Outdoor</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center px-6 py-3 hover:bg-gray-100 transition"
+            >
+              <img
+                src="./assets/images/icons/icons/bed-2.svg"
+                class="h-5 w-5 object-contain"
+                alt="Mattress"
+              />
+              <span class="ml-6 text-gray-600 text-sm">Mattress</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center px-6 py-3 hover:bg-gray-100 transition"
+            >
+              <img
+                src="./assets/images/icons/icons/restaurant.svg"
+                class="h-5 w-5 object-contain"
+                alt="Dining"
+              />
+              <span class="ml-6 text-gray-600 text-sm">Dining</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pages -->
+        <div
+          class="flex-grow hidden lg:flex items-center justify-center space-x-6"
+        >
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="index.html"
+                class="Paragraph-xs text-gray-200 hover:text-white transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="Paragraph-xs text-gray-200 hover:text-white transition"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                href="shop.html"
+                class="Paragraph-xs text-gray-200 hover:text-white transition"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="Paragraph-xs text-gray-200 hover:text-white transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Login/Register -->
+        <div class="hidden lg:flex items-center ml-auto">
+          <a
+            href="register.html"
+            class="Paragraph-xs text-gray-200 hover:text-white transition"
+            >Login/Register</a
+          >
+        </div>
+
+        <!-- Menu Button -->
+        <div
+          class="text-xl sm:text-3xl text-white cursor-pointer z-50 lg:hidden"
+        >
+          <i class="ri-menu-4-line" id="hamburger"></i>
+        </div>
+      </div>
+
+      <!-- Sidebar (Visible on mobile) -->
+      <div class="md:flex lg:hidden">
+        <!-- Sidebar Content -->
+        <div
+          id="sidebar"
+          class="fixed h-full z-50 inset-y-0 left-0 w-48 md:w-80 bg-gray-800 p-6 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-lg"
+        >
+          <!-- Close Button -->
+          <button
+            class="absolute top-4 right-4 text-white hover:text-gray-400 transition duration-200"
+            onclick="toggleSidebar()"
+          >
+            <!-- Close icon -->
+            <svg
+              id="close-icon"
+              class="w-6 h-6 text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <!-- Pages Only in Sidebar -->
+          <div id="nav-menu">
+            <!-- Logo -->
+            <a href="index.html" class="md:text-4xl text-2xl font-normal">
+              <span class="text-[#fd3d57] items-center text-center">RAF</span
+              ><span class="text-white">CART</span>
+            </a>
+
+            <!-- pages -->
+            <ul class="mt-10 space-y-6 text-gray-200">
+              <li class="border-b border-gray-600 pb-2">
+                <a
+                  href="index.html"
+                  class="nav-link text-white hover:text-gray-400 transition duration-200"
+                  >Home</a
+                >
+              </li>
+              <li class="border-b border-gray-600 pb-2">
+                <a
+                  href="about.html"
+                  class="nav-link text-white hover:text-gray-400 transition duration-200"
+                  >About us</a
+                >
+              </li>
+              <li class="border-b border-gray-600 pb-2">
+                <a
+                  href="shop.html"
+                  class="nav-link text-white hover:text-gray-400 transition duration-200"
+                  >Shop</a
+                >
+              </li>
+              <li class="border-b border-gray-600 pb-2">
+                <a
+                  href="contact.html"
+                  class="nav-link text-white hover:text-gray-400 transition duration-200"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="register.html"
+                  class="nav-link text-gray-200 hover:text-gray-400 transition duration-200"
+                  >Login/Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay -->
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black opacity-50 hidden"
+        onclick="toggleSidebar()"
+      ></div>
+    </nav>
+
+    <!--Breadcrumb-->
+    <div class="container py-4 flex items-center gap-3">
+      <a href="index.html" class="text-primary text-base">
+        <i class="fas fa-home"></i>
+      </a>
+      <span class="text-sm text-gray-400">
+        <i class="fas fa-chevron-right"></i>
+      </span>
+      <p class="text-gray-600 font-medium">My Account</p>
+    </div>
+
+    <!--Account wrapper-->
+    <div
+      class="container grid grid-cols-12 gap-6 pt-4 pb-16 items-start relative"
+    >
+      <!-- Sidebar Toggle Button for Mobile and Medium Screens -->
+      <div class="col-span-4 md:block lg:hidden">
+        <button
+          id="sidebarToggle"
+          class="bg-primary text-white rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          <!-- Menu Icon (Chevron Icon) -->
+          <svg
+            id="toggleIcon"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Chevron double right (for opening the sidebar) -->
+            <path
+              id="chevronDoubleRight"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 19l-7-7 7-7M18 19l-7-7 7-7"
+              class="hidden"
+            ></path>
+            <!-- Chevron double left (for closing the sidebar) -->
+            <path
+              id="chevronDoubleLeft"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 5l7 7-7 7M6 5l7 7-7 7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!--Sidebar-->
+      <div
+        id="sidebar1"
+        class="col-span-3 bg-white px-4 pb-6 shadow rounded overflow-hidden md:w-64 lg:w-80 mx-auto transition-transform duration-300 absolute top-0 left-0 h-auto z-10 -translate-x-full lg:translate-x-0 lg:relative"
+      >
+        <button
+          id="closeSidebar"
+          class="bg-primary text-white rounded-full p-1 absolute top-2 right-2 focus:outline-none md:block lg:hidden"
+        >
+          <!-- Chevron double left (for closing the sidebar) -->
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Chevron double right (for opening the sidebar) -->
+            <path
+              id="chevronDoubleRight"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 19l-7-7 7-7M18 19l-7-7 7-7"
+            ></path>
+            <!-- Chevron double left (for closing the sidebar) -->
+            <path
+              id="chevronDoubleLeft"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 5l7 7-7 7M6 5l7 7-7 7"
+              class="hidden"
+            ></path>
+          </svg>
+        </button>
+        <div class="px-4 py-3 flex items-center gap-4">
+          <div class="flex-shrink-0">
+            <img
+              src="./assets/images/avatar.png"
+              alt="profile"
+              class="rounded-full border border-gray-200 h-14 w-14 p-1 object-cover"
+            />
+          </div>
+          <div class="flex-grow">
+            <p class="text-gray-600">Hello,</p>
+            <h4 class="text-gray-800 font-medium">Russel Jhon</h4>
+          </div>
+        </div>
+
+        <div
+          class="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600"
+        >
+          <!--Account Details-->
+          <div class="space-y-1 pl-8">
+            <a
+              href="account.html"
+              class="relative hover:text-primary block font-semibold capitalize transition"
+            >
+              <span class="absolute -left-8 top-0 text-base">
+                <i class="far fa-address-card"></i>
+              </span>
+              Manage account
+            </a>
+            <a
+              href="profile-info.html"
+              class="relative hover:text-primary block capitalize transition"
+            >
+              Profile information
+            </a>
+            <a
+              href="#"
+              class="relative hover:text-primary block capitalize transition"
+            >
+              Manage address
+            </a>
+            <a
+              href="#"
+              class="relative hover:text-primary block capitalize transition"
+            >
+              Change password
+            </a>
+          </div>
+
+          <!--Order Details-->
+          <div class="space-y-1 pl-8 pt-4">
+            <a
+              href="#"
+              class="relative hover:text-primary block font-semibold capitalize transition"
+            >
+              <span class="absolute -left-8 top-0 text-base">
+                <i class="fas fa-gift"></i>
+              </span>
+              My Order History
+            </a>
+            <a
+              href="#"
+              class="relative hover:text-primary block capitalize transition"
+            >
+              My Returns
+            </a>
+            <a
+              href="#"
+              class="relative hover:text-primary block capitalize transition"
+            >
+              My Cancellations
+            </a>
+            <a
+              href="#"
+              class="relative hover:text-primary block capitalize transition"
+            >
+              My Reviews
+            </a>
+          </div>
+
+          <!--Payment Details-->
+          <div class="space-y-1 pl-8 pt-4">
+            <a
+              href="#"
+              class="relative hover:text-primary block font-semibold capitalize transition"
+            >
+              <span class="absolute -left-8 top-0 text-base">
+                <i class="far fa-credit-card"></i>
+              </span>
+              Payment Methds
+            </a>
+            <a
+              href="#"
+              class="relative hover:text-primary block capitalize transition"
+            >
+              Voucher
+            </a>
+          </div>
+
+          <!--Wishlist-->
+          <div class="space-y-1 pl-8 pt-4">
+            <a
+              href="wishlist.html"
+              class="relative hover:text-primary block font-semibold capitalize transition"
+            >
+              <span class="absolute -left-8 top-0 text-base">
+                <i class="far fa-heart"></i>
+              </span>
+              My Wishlist
+            </a>
+          </div>
+
+          <!--Logout-->
+          <div class="space-y-1 pl-8 pt-4">
+            <a
+              href="#"
+              class="relative hover:text-primary block font-semibold capitalize transition"
+            >
+              <span class="absolute -left-8 top-0 text-base">
+                <i class="fas fa-right-from-bracket"></i>
+              </span>
+              Logout
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Information -->
+      <div
+        id="main-content"
+        class="col-span-12 lg:col-span-9 ml-5 shadow rounded px-6 pt-5 pb-7 relative"
+      >
+        <h4 class="text-lg font-semibold capitalize mb-4">
+          Personal information
+        </h4>
+        <div class="space-y-4">
+          <!--Form-->
+          <form action="">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="" class="label-all text-gray-600 mb-2 block"
+                  >First Name</label
+                >
+                <input type="text" placeholder="first name" class="input-box" />
+              </div>
+              <div>
+                <label for="" class="label-all text-gray-600 mb-2 block"
+                  >Last Name</label
+                >
+                <input type="text" placeholder="last name" class="input-box" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="" class="label-all text-gray-600 mb-2 block"
+                  >Birthday</label
+                >
+                <input
+                  type="date"
+                  placeholder="Enter birthday date"
+                  class="input-box"
+                />
+              </div>
+              <div>
+                <label for="" class="label-all text-gray-600 mb-2 block"
+                  >Gender</label
+                >
+                <select class="input-box">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="" class="label-all text-gray-600 mb-2 block"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  placeholder="example@gmail.com"
+                  class="input-box"
+                />
+              </div>
+              <div>
+                <label for="" class="label-all text-gray-600 mb-2 block"
+                  >Phone Number</label
+                >
+                <input type="text" placeholder="123456789" class="input-box" />
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="mt-4">
+              <button
+                type="submit"
+                class="text-center text-white bg-primary border border-primary px-4 py-3 font-medium rounded-md hover:bg-transparent transition hover:text-primary uppercase"
+              >
+                save change
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
+      <div class="container">
+        <!-- Regular desktop layout -->
+        <div class="hidden lg:grid lg:grid-cols-3 gap-8">
+          <!--Logo and Social Icons-->
+          <div class="space-y-8">
+            <img src="./assets/images/logo.svg" class="w-32" alt="logo" />
+
+            <p class="Paragraph-xs md:!text-left text-gray-500">
+              E commerce is the process of buying and selling goods and services
+              online. It has become increasingly popular in recent years, as it
+              offers a convenient and efficient way to shop.
+            </p>
+
+            <!--Social Icons-->
+            <div class="flex space-x-6">
+              <a
+                href="https://www.facebook.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--Solutions and Support-->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!--Solutions-->
+            <div>
+              <h3
+                class="text-base font-semibold text-gray-400 uppercase tracking-wider"
+              >
+                Solutions
+              </h3>
+              <div class="mt-4 space-y-4">
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Marketing</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Analytics</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Commerce</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Insights</a
+                >
+              </div>
+            </div>
+
+            <!--Support-->
+            <div>
+              <h3
+                class="text-base font-semibold text-gray-400 uppercase tracking-wider"
+              >
+                Support
+              </h3>
+              <div class="mt-4 space-y-4">
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Pricing</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Documentation</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Guides</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >API Status</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--Company and Legal-->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!--Company-->
+            <div>
+              <h3
+                class="text-base font-semibold text-gray-400 uppercase tracking-wider"
+              >
+                Company
+              </h3>
+              <div class="mt-4 space-y-4">
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >About</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Jobs</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Blog</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Press</a
+                >
+              </div>
+            </div>
+
+            <!--Legal-->
+            <div>
+              <h3
+                class="text-base font-semibold text-gray-400 uppercase tracking-wider"
+              >
+                Legal
+              </h3>
+              <div class="mt-4 space-y-4">
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Claim</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Privacy</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Policy</a
+                >
+                <a
+                  href="#"
+                  class="text-sm text-gray-500 hover:text-gray-900 block"
+                  >Terms</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution, Support, Compant and Legal for mobile -->
+        <div class="block lg:hidden space-y-4">
+          <!--Logo and Social Icons-->
+          <div class="space-y-8 text-center">
+            <img
+              src="./assets/images/logo.svg"
+              class="w-32 mx-auto"
+              alt="logo"
+            />
+            <p class="Paragraph-xs text-center text-gray-500">
+              E commerce is the process of buying and selling goods and services
+              online. It has become increasingly popular in recent years, as it
+              offers a convenient and efficient way to shop.
+            </p>
+            <!--Social Icons-->
+            <div class="flex space-x-6 justify-center">
+              <a
+                href="https://www.facebook.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                class="text-gray-400 hover:text-[#fd3d57] transition-transform duration-300 hover:scale-125"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--Solutions-->
+          <div>
+            <button
+              class="w-full text-left text-lg font-semibold py-4 border border-b-[1px] border-t-0 border-l-0 border-r-0 border-gray-100 flex justify-between items-center"
+              onclick="toggleAccordion('solutionContent')"
+            >
+              <span class="text-base text-gray-400 uppercase">Solutions</span>
+              <span class="transform transition-transform" id="solutionIcon">
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </button>
+            <div
+              id="solutionContent"
+              class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+            >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Marketing</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Analytics</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Commerce</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Insights</a
+              >
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div>
+            <button
+              class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center border border-b-[1px] border-t-0 border-l-0 border-r-0 border-gray-100"
+              onclick="toggleAccordion('supportContent')"
+            >
+              <span class="text-base text-gray-400 uppercase">Support</span>
+              <span class="transform transition-transform" id="supportIcon">
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </button>
+            <div
+              id="supportContent"
+              class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+            >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Pricing</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Documentation</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Guides</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >API Status</a
+              >
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <button
+              class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center border border-b-[1px] border-t-0 border-l-0 border-r-0 border-gray-100"
+              onclick="toggleAccordion('companyContent')"
+            >
+              <span class="text-base text-gray-400 uppercase">Company</span>
+              <span class="transform transition-transform" id="companyIcon">
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </button>
+            <div
+              id="companyContent"
+              class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+            >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >About</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Jobs</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Blog</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Press</a
+              >
+            </div>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <button
+              class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center border border-b-[1px] border-t-0 border-l-0 border-r-0 border-gray-100"
+              onclick="toggleAccordion('legalContent')"
+            >
+              <span class="text-base text-gray-400 uppercase">Legal</span>
+              <span class="transform transition-transform" id="legalIcon">
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </button>
+            <div
+              id="legalContent"
+              class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+            >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Claim</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Privacy</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Policy</a
+              >
+              <a
+                href="#"
+                class="block text-sm text-gray-500 hover:text-gray-900 py-2"
+                >Terms</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--copyright-->
+    <div class="bg-gray-800 py-4">
+      <div
+        class="container flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0"
+      >
+        <p class="text-white Paragraph-xs lg:!text-left">
+          © RAFCART - All Rights Reserved
+        </p>
+        <img src="./assets/images/methods.png" class="h-5" alt="" />
+      </div>
+    </div>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
